@@ -1,12 +1,20 @@
 import type { NextPage } from 'next';
 
-import { Heading, Layout, SecondHeading, MouseIcon } from './components';
+import {
+  Heading,
+  Layout,
+  SecondHeading,
+  MouseIcon,
+  HeadingsWrapper,
+} from './components';
 
 const Hero: NextPage = () => {
   return (
     <Layout>
-      <Heading>Petr Šudoma</Heading>
-      <SecondHeading>Fullstack Developer</SecondHeading>
+      <HeadingsWrapper>
+        <Heading>Petr Šudoma</Heading>
+        <SecondHeading>Fullstack Developer</SecondHeading>
+      </HeadingsWrapper>
       <MouseIcon />
     </Layout>
   );
