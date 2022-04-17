@@ -1,0 +1,61 @@
+import styled from 'styled-components';
+
+export const Skill = styled.div`
+  display: flex;
+  margin-bottom: 15px;
+  position: relative;
+  width: 150px;
+
+  @media only screen and (max-width: 800px) {
+    width: 100%;
+    justify-content: flex-end;
+  }
+`;
+
+type SkillLineProps = {
+  progress: number;
+};
+export const SkillLine = styled.div<SkillLineProps>`
+  height: 5px;
+  width: 400px;
+  background-color: #beab00;
+  position: absolute;
+  right: 220px;
+
+  &:before {
+    content: '';
+    display: block;
+    width: ${(props) => props.progress}%;
+    height: 5px;
+    background-color: ${(props) => props.theme.colors.gold};
+  }
+
+  @media only screen and (max-width: 800px) {
+    left: 0;
+    width: 300px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: 200px;
+  }
+`;
+
+export const SkillText = styled.p`
+  color: ${(props) => props.theme.colors.gold};
+  font-size: 1.1em;
+  position: relative;
+  bottom: 13px;
+
+  @media only screen and (max-width: 800px) {
+    font-size: 1em;
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 0.8em;
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 0.6em;
+    bottom: 6px;
+  }
+`;
