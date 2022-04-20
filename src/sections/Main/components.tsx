@@ -1,9 +1,15 @@
+import Button from '@components/Button';
+
 import styled from 'styled-components';
 
 export const Layout = styled.div`
   width: 80%;
   margin: 0 auto;
   margin-top: 150px;
+
+  @media only screen and (max-width: 600px) {
+    margin-top: 50px;
+  }
 `;
 
 export const LargeText = styled.p`
@@ -58,8 +64,37 @@ export const GoldenText = styled.p`
 `;
 
 export const SkillsWrapper = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   margin-top: 150px;
+  width: 700px;
+`;
+
+export const Flexbox = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`;
+
+export const TouchedButton = styled(Button)`
+  position: absolute;
+  left: 40%;
+  bottom: -50px;
+  transform: translateX(-40%);
+
+  @media only screen and (max-width: 800px) {
+    left: 8%;
+    transform: translateX(8%);
+    width: 180px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    bottom: -40px;
+    left: 5%;
+    transform: translateX(5%);
+    width: 140px;
+    height: 35px;
+    font-size: 0.8em;
+  }
 `;

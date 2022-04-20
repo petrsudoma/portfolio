@@ -6,7 +6,10 @@ import {
   Layout,
   SkillsWrapper,
   Text,
+  Flexbox,
+  TouchedButton,
 } from './components';
+import Button from '@components/Button';
 import Skill from './Skill';
 
 const Main = () => {
@@ -16,12 +19,15 @@ const Main = () => {
       <Text>My passion is web development</Text>
       <GoldenText>is cloud computing</GoldenText>
 
-      <SkillsWrapper>
-        <Skill progress={90}>HTML, CSS, JS</Skill>
-        <Skill progress={80}>React</Skill>
-        <Skill progress={60}>NestJS</Skill>
-        <Skill progress={50}>Express</Skill>
-      </SkillsWrapper>
+      <Flexbox>
+        <SkillsWrapper>
+          <Skill progress={90}>HTML, CSS, JS</Skill>
+          <Skill progress={80}>React</Skill>
+          <Skill progress={60}>NestJS</Skill>
+          <Skill progress={50}>Express</Skill>
+          <TouchedButton>Other skills</TouchedButton>
+        </SkillsWrapper>
+      </Flexbox>
     </Layout>
   );
 };
