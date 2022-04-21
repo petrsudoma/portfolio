@@ -3,18 +3,17 @@ import React from 'react';
 import {
   GoldenText,
   LargeText,
-  Layout,
   SkillsWrapper,
   Text,
   Flexbox,
   TouchedButton,
+  MarginBox,
 } from './components';
-import Button from '@components/Button';
 import Skill from './Skill';
 
 const Main = () => {
   return (
-    <Layout>
+    <MarginBox>
       <LargeText>Hi.</LargeText>
       <Text>My passion is web development</Text>
       <GoldenText>is cloud computing</GoldenText>
@@ -28,7 +27,7 @@ const Main = () => {
           <TouchedButton>Other skills</TouchedButton>
         </SkillsWrapper>
       </Flexbox>
-    </Layout>
+    </MarginBox>
   );
 };
 

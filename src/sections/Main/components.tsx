@@ -2,9 +2,7 @@ import Button from '@components/Button';
 
 import styled from 'styled-components';
 
-export const Layout = styled.div`
-  width: 80%;
-  margin: 0 auto;
+export const MarginBox = styled.div`
   margin-top: 150px;
 
   @media only screen and (max-width: 600px) {
