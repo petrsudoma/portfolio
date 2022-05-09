@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Hero from '@sections/Hero';
 import Main from '@sections/Main';
 import Experience from '@sections/Experience';
+import Contact from '@sections/Contact';
 
 const Home: NextPage = () => {
   return (
@@ -13,6 +14,7 @@ const Home: NextPage = () => {
       <Layout>
         <Main />
         <Experience />
+        <Contact />
       </Layout>
     </>
   );
@@ -21,6 +23,6 @@ const Home: NextPage = () => {
 export default Home;
 
 export const Layout = styled.div`
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 `;
