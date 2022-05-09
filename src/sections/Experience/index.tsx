@@ -4,7 +4,6 @@ import {
   GoldenText,
   LeftFlexbox,
   Flexbox,
-  RightFlexbox,
   WhiteText,
   ExperienceImage,
 } from './components';
@@ -17,9 +16,9 @@ const Experience = () => {
         <WhiteText>Going to study business management at university</WhiteText>
       </LeftFlexbox>
 
-      <RightFlexbox>
+      <div>
         <ExperienceImage />
-      </RightFlexbox>
+      </div>
     </Flexbox>
   );
 };
