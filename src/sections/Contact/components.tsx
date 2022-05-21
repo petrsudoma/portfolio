@@ -8,8 +8,10 @@ import {
 export const Flexbox = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  align-items: center;
+  margin-top: 15%;
+  margin-bottom: 6%;
+  padding: 0 8%;
 `;
 
 export const SocialBox = styled.div`

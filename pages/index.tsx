@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import styled from 'styled-components';
 
 import Hero from '@sections/Hero';
-import Main from '@sections/Main';
+import Main from '@sections/Skills';
 import Experience from '@sections/Experience';
 import Contact from '@sections/Contact';
 

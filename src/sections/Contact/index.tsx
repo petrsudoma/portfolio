@@ -10,6 +10,7 @@ import {
   LinkedinIcon,
   CVIcon,
 } from './components';
+import Form from './Form';
 
 const Contact = () => {
   return (
@@ -31,6 +32,8 @@ const Contact = () => {
           <SocialLinkText>Get my CV</SocialLinkText>
         </SocialLinkWrapper>
       </SocialBox>
+
+      <Form></Form>
     </Flexbox>
   );
 };
