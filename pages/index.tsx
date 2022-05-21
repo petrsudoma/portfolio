@@ -8,7 +8,7 @@ import Contact from '@sections/Contact';
 
 const Home: NextPage = () => {
   return (
-    <>
+    <Wrapper>
       <Hero />
 
       <Layout>
@@ -16,13 +16,17 @@ const Home: NextPage = () => {
         <Experience />
         <Contact />
       </Layout>
-    </>
+    </Wrapper>
   );
 };
 
 export default Home;
 
-export const Layout = styled.div`
+const Layout = styled.div`
   width: 90%;
   margin: 0 auto;
+`;
+
+const Wrapper = styled.div`
+  overflow: hidden;
 `;

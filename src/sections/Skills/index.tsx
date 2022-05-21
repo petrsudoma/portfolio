@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import {
   GoldenText,
@@ -12,13 +14,19 @@ import {
 import Skill from './Skill';
 
 const Main = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1300, once: true, offset: 100 });
+  }, []);
+
   return (
     <MarginBox>
-      <LargeText>Hi.</LargeText>
-      <Text>My passion is web development</Text>
-      <GoldenText>is cloud computing</GoldenText>
+      <div data-aos='slide-right'>
+        <LargeText>Hi.</LargeText>
+        <Text>My passion is web development</Text>
+        <GoldenText>is cloud computing</GoldenText>
+      </div>
 
-      <Flexbox>
+      <Flexbox data-aos='slide-left'>
         <SkillsWrapper>
           <Skill progress={80}>React</Skill>
           <Skill progress={70}>Express</Skill>

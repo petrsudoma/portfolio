@@ -73,6 +73,7 @@ export const SkillsWrapper = styled.div`
 export const Flexbox = styled.div`
   display: flex;
   justify-content: flex-end;
+  margin-top: 1%;
 `;
 
 export const TouchedButton = styled(Button)`

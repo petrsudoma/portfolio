@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
 
 import {
   Flexbox,
@@ -13,8 +14,12 @@ import {
 import Form from './Form';
 
 const Contact = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1300, once: true });
+  }, []);
+
   return (
-    <Flexbox>
+    <Flexbox data-aos='fade-up'>
       <SocialBox>
         <CrownIcon />
         <SocialLinkWrapper>
