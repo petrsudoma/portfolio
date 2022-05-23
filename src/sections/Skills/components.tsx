@@ -62,12 +62,11 @@ export const GoldenText = styled.p`
 `;
 
 export const SkillsWrapper = styled.div`
-  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   margin-top: 150px;
-  width: 700px;
+  width: 800px;
 `;
 
 export const Flexbox = styled.div`
@@ -76,24 +75,24 @@ export const Flexbox = styled.div`
   margin-top: 1%;
 `;
 
+export const ButtonWrapper = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+`;
+
 export const TouchedButton = styled(Button)`
-  position: absolute;
-  left: 40%;
-  bottom: -50px;
-  transform: translateX(-40%);
+  margin-right: 70px;
 
   @media only screen and (max-width: 800px) {
-    left: 8%;
-    transform: translateX(8%);
-    width: 180px;
+    width: 130px;
+    height: 35px;
+    font-size: 0.8em;
   }
 
   @media only screen and (max-width: 600px) {
-    bottom: -40px;
-    left: 5%;
-    transform: translateX(5%);
-    width: 140px;
-    height: 35px;
-    font-size: 0.8em;
+    width: 100px;
+    height: 30px;
+    font-size: 0.6em;
   }
 `;

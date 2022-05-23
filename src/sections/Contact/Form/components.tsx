@@ -7,6 +7,15 @@ export const Form = styled.div`
   height: 250px;
   box-shadow: 0 12px 56px 9px rgba(0, 0, 0, 0.25);
   padding-top: 1.5%;
+
+  @media only screen and (max-width: 500px) {
+    width: 100%;
+    min-width: 220px;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const Input = styled.input`
@@ -23,6 +32,11 @@ export const Input = styled.input`
   ::placeholder {
     color: #fff;
   }
+
+  @media only screen and (max-width: 500px) {
+    margin-left: 0;
+    font-size: 0.6em;
+  }
 `;
 
 export const SendButton = styled(Button)`
@@ -31,4 +45,12 @@ export const SendButton = styled(Button)`
   margin-top: 9%;
   margin-left: 10%;
   font-size: 0.8em;
+
+  @media only screen and (max-width: 500px) {
+    margin-left: 0;
+    width: 100px;
+    height: 30px;
+    font-size: 0.6em;
+    margin-bottom: 20px;
+  }
 `;

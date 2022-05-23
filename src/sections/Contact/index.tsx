@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
+import Link from 'next/link';
 
 import {
   Flexbox,
@@ -23,18 +24,30 @@ const Contact = () => {
       <SocialBox>
         <CrownIcon />
         <SocialLinkWrapper>
-          <GitHubIcon fill='#fae100' />
-          <SocialLinkText>Checkout my code</SocialLinkText>
+          <Link href='https://github.com/petrsudoma'>
+            <a target='_blank'>
+              <GitHubIcon fill='#fae100' />
+              <SocialLinkText>Checkout my code</SocialLinkText>
+            </a>
+          </Link>
         </SocialLinkWrapper>
 
         <SocialLinkWrapper>
-          <LinkedinIcon fill='#fae100' />
-          <SocialLinkText>Look at my profile</SocialLinkText>
+          <Link href='https://www.linkedin.com/in/petr-sudoma/'>
+            <a target='_blank'>
+              <LinkedinIcon fill='#fae100' />
+              <SocialLinkText>Look at my profile</SocialLinkText>
+            </a>
+          </Link>
         </SocialLinkWrapper>
 
         <SocialLinkWrapper>
-          <CVIcon fill='#fae100' />
-          <SocialLinkText>Get my CV</SocialLinkText>
+          <Link href='/cv'>
+            <a target='_blank'>
+              <CVIcon fill='#fae100' />
+              <SocialLinkText>Get my CV</SocialLinkText>
+            </a>
+          </Link>
         </SocialLinkWrapper>
       </SocialBox>
 

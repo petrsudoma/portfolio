@@ -2,14 +2,10 @@ import styled from 'styled-components';
 
 export const Skill = styled.div`
   display: flex;
+  justify-content: center;
   margin-bottom: 15px;
   position: relative;
-  width: 150px;
-
-  @media only screen and (max-width: 800px) {
-    width: 100%;
-    justify-content: flex-end;
-  }
+  width: 100%;
 `;
 
 type SkillLineProps = {
@@ -19,8 +15,6 @@ export const SkillLine = styled.div<SkillLineProps>`
   height: 5px;
   width: 400px;
   background-color: #beab00;
-  position: absolute;
-  right: 220px;
 
   &:before {
     content: '';
@@ -31,11 +25,14 @@ export const SkillLine = styled.div<SkillLineProps>`
   }
 
   @media only screen and (max-width: 800px) {
-    left: 0;
     width: 300px;
   }
 
   @media only screen and (max-width: 600px) {
+    width: 250px;
+  }
+
+  @media only screen and (max-width: 400px) {
     width: 200px;
   }
 `;
@@ -45,6 +42,8 @@ export const SkillText = styled.p`
   font-size: 1.1em;
   position: relative;
   bottom: 13px;
+  left: 50px;
+  width: 100px;
 
   @media only screen and (max-width: 800px) {
     font-size: 1em;

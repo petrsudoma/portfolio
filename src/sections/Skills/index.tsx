@@ -10,6 +10,7 @@ import {
   Flexbox,
   TouchedButton,
   MarginBox,
+  ButtonWrapper,
 } from './components';
 import Skill from './Skill';
 
@@ -32,7 +33,9 @@ const Main = () => {
           <Skill progress={70}>Express</Skill>
           <Skill progress={60}>NestJS</Skill>
           <Skill progress={50}>Docker</Skill>
-          <TouchedButton>Other skills</TouchedButton>
+          <ButtonWrapper>
+            <TouchedButton>Other skills</TouchedButton>
+          </ButtonWrapper>
         </SkillsWrapper>
       </Flexbox>
     </MarginBox>
