@@ -1,5 +1,6 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import { SnackbarProvider } from 'notistack';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
@@ -10,9 +11,14 @@ const GlobalStyles = createGlobalStyle`
 	font-size: 20px;
 	font-family: 'Nunito', sans-serif;
 	font-weight: 400;
-	color: #fff;
+}
+
+body {
+  color: #fff;
 	background-color: #252525;
-}`;
+}
+
+`;
 
 const theme = {
   colors: {
@@ -26,9 +32,18 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
       </Head>
+
       <ThemeProvider theme={theme}>
-        <GlobalStyles />
-        <Component {...pageProps} />
+        <SnackbarProvider
+          maxSnack={2}
+          anchorOrigin={{
+            vertical: 'bottom',
+            horizontal: 'right',
+          }}
+        >
+          <GlobalStyles />
+          <Component {...pageProps} />
+        </SnackbarProvider>
       </ThemeProvider>
     </>
   );

@@ -4,10 +4,16 @@ import styled from 'styled-components';
 type ButtonProps = {
   children: string;
   className?: string;
+  type?: 'submit' | 'button' | 'reset';
+  onClick?: () => void;
 };
 const Button: React.FC<ButtonProps> = (props) => {
   return (
-    <ButtonComponent className={props.className}>
+    <ButtonComponent
+      type={props.type}
+      className={props.className}
+      onClick={props.onClick}
+    >
       {props.children}
     </ButtonComponent>
   );
@@ -23,4 +29,5 @@ const ButtonComponent = styled.button`
   color: ${(props) => props.theme.colors.gold};
   font-weight: 200;
   font-size: 0.9em;
+  background-color: transparent;
 `;

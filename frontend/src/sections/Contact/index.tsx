@@ -51,7 +51,7 @@ const Contact = () => {
         </SocialLinkWrapper>
       </SocialBox>
 
-      <Form></Form>
+      <Form />
     </Flexbox>
   );
 };

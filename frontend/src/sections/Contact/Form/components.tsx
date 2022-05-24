@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import Button from '@components/Button';
 
-export const Form = styled.div`
+export const Form = styled.form`
   width: 370px;
   height: 250px;
   box-shadow: 0 12px 56px 9px rgba(0, 0, 0, 0.25);
@@ -28,6 +28,8 @@ export const Input = styled.input`
   display: block;
   font-size: 0.8em;
   font-weight: 100;
+  background-color: transparent;
+  color: #fff;
 
   ::placeholder {
     color: #fff;
@@ -37,6 +39,23 @@ export const Input = styled.input`
     margin-left: 0;
     font-size: 0.6em;
   }
+`;
+
+export const InputWrapper = styled.div`
+  width: 100%;
+  position: relative;
+
+  @media only screen and (max-width: 500px) {
+    display: flex;
+    justify-content: center;
+  }
+`;
+
+export const ErrorText = styled.p`
+  font-size: 0.7em;
+  color: #d63131;
+  position: absolute;
+  left: 10%;
 `;
 
 export const SendButton = styled(Button)`
