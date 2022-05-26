@@ -5,6 +5,7 @@ type ButtonProps = {
   children: string;
   className?: string;
   type?: 'submit' | 'button' | 'reset';
+  disabled?: boolean;
   onClick?: () => void;
 };
 const Button: React.FC<ButtonProps> = (props) => {
@@ -13,6 +14,7 @@ const Button: React.FC<ButtonProps> = (props) => {
       type={props.type}
       className={props.className}
       onClick={props.onClick}
+      disabled={props.disabled}
     >
       {props.children}
     </ButtonComponent>
@@ -30,4 +32,11 @@ const ButtonComponent = styled.button`
   font-weight: 200;
   font-size: 0.9em;
   background-color: transparent;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  :hover {
+    background-color: ${(props) => props.theme.colors.gold};
+    color: #252525;
+  }
 `;

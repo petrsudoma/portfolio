@@ -23,8 +23,12 @@ const Home: NextPage = () => {
 export default Home;
 
 const Layout = styled.div`
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
+
+  @media only screen and (max-width: 1600px) {
+    width: 90%;
+  }
 `;
 
 const Wrapper = styled.div`

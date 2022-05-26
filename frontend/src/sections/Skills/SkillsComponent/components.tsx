@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import Button from '@components/Button';
+
 export const Skill = styled.div`
   display: flex;
   justify-content: center;
@@ -56,5 +58,27 @@ export const SkillText = styled.p`
   @media only screen and (max-width: 600px) {
     font-size: 0.6em;
     bottom: 6px;
+  }
+`;
+
+export const ButtonWrapper = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+`;
+
+export const TouchedButton = styled(Button)`
+  margin-right: 70px;
+
+  @media only screen and (max-width: 800px) {
+    width: 130px;
+    height: 35px;
+    font-size: 0.8em;
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: 100px;
+    height: 30px;
+    font-size: 0.6em;
   }
 `;

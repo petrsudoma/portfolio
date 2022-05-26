@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -8,16 +8,47 @@ import {
   SkillsWrapper,
   Text,
   Flexbox,
-  TouchedButton,
   MarginBox,
-  ButtonWrapper,
 } from './components';
-import Skill from './Skill';
+import OtherSkills from './OtherSkills';
+import SkillsComponent from './SkillsComponent';
 
-const Main = () => {
+export type AnimationProps = {
+  state: OtherSkillsState;
+};
+
+export enum OtherSkillsState {
+  HIDDEN,
+  SHOW,
+  HIDE,
+}
+const Skills = () => {
+  const [otherSkills, setOtherSkills] = useState<OtherSkillsState>(
+    OtherSkillsState.HIDDEN
+  );
+  const [disabledButton, setDisabledButton] = useState<boolean>(false);
+
   useEffect(() => {
     AOS.init({ duration: 1300, once: true, offset: 100 });
   }, []);
+
+  const disableButtonHandler = () => {
+    setDisabledButton(true);
+    setTimeout(() => setDisabledButton(false), 2000);
+  };
+
+  const setOtherSkillsHandler = () => {
+    if (
+      otherSkills === OtherSkillsState.HIDDEN ||
+      otherSkills === OtherSkillsState.HIDE
+    ) {
+      disableButtonHandler();
+      setOtherSkills(OtherSkillsState.SHOW);
+    } else if (otherSkills === OtherSkillsState.SHOW) {
+      disableButtonHandler();
+      setOtherSkills(OtherSkillsState.HIDE);
+    }
+  };
 
   return (
     <MarginBox>
@@ -27,19 +58,18 @@ const Main = () => {
         <GoldenText>is cloud computing</GoldenText>
       </div>
 
-      <Flexbox data-aos='slide-left'>
-        <SkillsWrapper>
-          <Skill progress={80}>React</Skill>
-          <Skill progress={70}>Express</Skill>
-          <Skill progress={60}>NestJS</Skill>
-          <Skill progress={50}>Docker</Skill>
-          <ButtonWrapper>
-            <TouchedButton>Other skills</TouchedButton>
-          </ButtonWrapper>
+      <Flexbox>
+        <SkillsWrapper data-aos='slide-left' state={otherSkills}>
+          <SkillsComponent
+            disabledButton={disabledButton}
+            otherSkillsHandler={setOtherSkillsHandler}
+          />
         </SkillsWrapper>
+
+        <OtherSkills state={otherSkills} />
       </Flexbox>
     </MarginBox>
   );
 };
 
-export default Main;
+export default Skills;
