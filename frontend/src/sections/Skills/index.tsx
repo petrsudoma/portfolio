@@ -59,11 +59,13 @@ const Skills = () => {
       </div>
 
       <Flexbox>
-        <SkillsWrapper data-aos='slide-left' state={otherSkills}>
-          <SkillsComponent
-            disabledButton={disabledButton}
-            otherSkillsHandler={setOtherSkillsHandler}
-          />
+        <SkillsWrapper state={otherSkills}>
+          <div data-aos='slide-left'>
+            <SkillsComponent
+              disabledButton={disabledButton}
+              otherSkillsHandler={setOtherSkillsHandler}
+            />
+          </div>
         </SkillsWrapper>
 
         <OtherSkills state={otherSkills} />
