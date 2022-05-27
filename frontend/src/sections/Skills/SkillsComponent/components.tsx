@@ -52,10 +52,6 @@ export const SkillText = styled.p`
   }
 
   @media only screen and (max-width: 600px) {
-    font-size: 0.8em;
-  }
-
-  @media only screen and (max-width: 600px) {
     font-size: 0.6em;
     bottom: 6px;
   }

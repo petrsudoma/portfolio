@@ -9,10 +9,10 @@ type OtherSkillsProps = {
 const OtherSkills: React.FC<OtherSkillsProps> = (props) => {
   return (
     <OtherSkillsComponent state={props.state}>
-      <OtherSkill>Test</OtherSkill>
-      <OtherSkill>Test</OtherSkill>
-      <OtherSkill>Test</OtherSkill>
-      <OtherSkill>Test</OtherSkill>
+      <OtherSkill>AWS</OtherSkill>
+      <OtherSkill>NestJS</OtherSkill>
+      <OtherSkill>PostgreSQL</OtherSkill>
+      <OtherSkill>Linux</OtherSkill>
     </OtherSkillsComponent>
   );
 };

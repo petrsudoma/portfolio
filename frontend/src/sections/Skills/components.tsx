@@ -74,13 +74,13 @@ export const SkillsWrapper = styled.div<AnimationProps>`
     }
 
     to {
-      transform: translateX(-20%);
+      transform: translateX(-25%);
     }
   }
 
   @keyframes skills-animaton-reverse {
     from {
-      transform: translateX(-20%);
+      transform: translateX(-25%);
     }
 
     to {
@@ -94,7 +94,8 @@ export const SkillsWrapper = styled.div<AnimationProps>`
       animation-name: skills-animaton;
       animation-duration: 2s;
       animation-fill-mode: forwards;
-      animation-timing-function: ease-out;`
+      animation-timing-function: ease-out;
+      `
       : props.state === OtherSkillsState.HIDE
       ? `
       animation-name: skills-animaton-reverse;

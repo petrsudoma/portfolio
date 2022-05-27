@@ -30,7 +30,7 @@ const SkillsComponent: React.FC<SkillsProps> = (props) => {
     <>
       <Skill progress={80}>React</Skill>
       <Skill progress={70}>Express</Skill>
-      <Skill progress={60}>NestJS</Skill>
+      <Skill progress={60}>Python</Skill>
       <Skill progress={50}>Docker</Skill>
       <ButtonWrapper>
         <TouchedButton
