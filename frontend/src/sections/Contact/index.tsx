@@ -42,7 +42,7 @@ const Contact = () => {
         </SocialLinkWrapper>
 
         <SocialLinkWrapper>
-          <Link href='/cv'>
+          <Link href='/cv.pdf'>
             <a target='_blank'>
               <CVIcon fill='#fae100' />
               <SocialLinkText>Get my CV</SocialLinkText>
