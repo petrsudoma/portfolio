@@ -12,7 +12,8 @@ app.use(
 		origin: [
 			'http://localhost:3000',
 			'https://petrsudoma-dev.vercel.app',
-			'https://petrsudoma.vercel.app/',
+			'https://petrsudoma.vercel.app',
+			'https://petrsudoma.com',
 		],
 	})
 );
