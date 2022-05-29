@@ -42,17 +42,11 @@ export const OtherSkills = styled.ul<AnimationProps>`
   ${(props) =>
     props.state === OtherSkillsState.SHOW
       ? `
-      animation-name: other-skills-animation;
-      animation-duration: 2s;
-      animation-fill-mode: forwards;
-      animation-timing-function: ease-out;
+      animation: other-skills-animation 2s ease-out 0s forwards;
       `
       : props.state === OtherSkillsState.HIDE
       ? `
-      animation-name: other-skills-animation-reverse;
-      animation-duration: 2s;
-      animation-fill-mode: forwards;
-      animation-timing-function: ease-out;
+      animation: other-skills-animation-reverse 2s ease-out 0s forwards;
       `
       : null};
 `;

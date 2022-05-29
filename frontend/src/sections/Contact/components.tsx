@@ -15,6 +15,7 @@ export const Flexbox = styled.div`
 
   @media only screen and (max-width: 1020px) {
     flex-direction: column;
+    margin-bottom: 15%;
   }
 `;
 
