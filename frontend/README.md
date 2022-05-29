@@ -2,7 +2,7 @@
 
 *Website is available at https://petrsudoma.com*
 
-**Lunch a production build**
+**Launch a production build**
 
 ```
 yarn
@@ -10,7 +10,7 @@ yarn run build
 yarn run start:prod
 ```
 
-**Lunch a development environment**
+**Launch a development environment**
 
 ```
 yarn
