@@ -25,10 +25,13 @@ export default Home;
 const Layout = styled.div`
   width: 80%;
   margin: 0 auto;
-  overflow: hidden;
 
   @media only screen and (max-width: 1600px) {
     width: 90%;
+  }
+
+  @media only screen and (max-width: 900px) {
+    overflow: hidden;
   }
 `;
 

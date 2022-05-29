@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { useSnackbar } from 'notistack';
@@ -8,6 +8,7 @@ import {
   Form as FormComponent,
   Input,
   InputWrapper,
+  LoadingCircle,
   SendButton,
 } from './components';
 
@@ -17,21 +18,27 @@ const validationSchema = Yup.object().shape({
 });
 
 const Form = () => {
+  const [sendingMessage, setSendingMessage] = useState<boolean>(false);
   const { enqueueSnackbar } = useSnackbar();
 
   return (
     <Formik
       initialValues={{ email: '', message: '' }}
       onSubmit={(values, { resetForm }) => {
+        setSendingMessage(true);
+
         fetch(process.env.NEXT_PUBLIC_BACKEND_URL + '/message', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(values),
         })
-          .then(() => enqueueSnackbar('Message sent', { variant: 'success' }))
-          .catch(() =>
-            enqueueSnackbar('Failed. Try again', { variant: 'error' })
-          );
+          .then(() => {
+            enqueueSnackbar('Message sent', { variant: 'success' });
+          })
+          .catch(() => {
+            enqueueSnackbar('Failed. Try again', { variant: 'error' });
+          })
+          .finally(() => setSendingMessage(false));
 
         resetForm();
       }}
@@ -39,6 +46,7 @@ const Form = () => {
     >
       {({ values, errors, touched, handleChange, handleSubmit }) => (
         <FormComponent onSubmit={handleSubmit}>
+          {sendingMessage && <LoadingCircle />}
           <InputWrapper>
             <Input
               placeholder='Your email'

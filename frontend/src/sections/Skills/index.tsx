@@ -60,7 +60,7 @@ const Skills = () => {
 
       <Flexbox>
         <SkillsWrapper state={otherSkills}>
-          <div data-aos='slide-left'>
+          <div data-aos='slide-left' style={{ width: '100%' }}>
             <SkillsComponent
               disabledButton={disabledButton}
               otherSkillsHandler={setOtherSkillsHandler}

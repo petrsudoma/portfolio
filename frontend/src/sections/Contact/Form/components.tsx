@@ -7,6 +7,7 @@ export const Form = styled.form`
   height: 250px;
   box-shadow: 0 12px 56px 9px rgba(0, 0, 0, 0.25);
   padding-top: 1.5%;
+  position: relative;
 
   @media only screen and (max-width: 500px) {
     width: 100%;
@@ -56,6 +57,36 @@ export const ErrorText = styled.p`
   color: #d63131;
   position: absolute;
   left: 10%;
+
+  @media only screen and (max-width: 500px) {
+    font-size: 0.6em;
+    left: 20%;
+    top: 100%;
+  }
+`;
+
+export const LoadingCircle = styled.div`
+  background-color: transparent;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  border-top: 5px solid ${(props) => props.theme.colors.gold};
+  animation: rotate 2s linear 0s infinite;
+  position: absolute;
+  left: 45%;
+  top: 40%;
+  transform: translate(-45%, -40%);
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
 `;
 
 export const SendButton = styled(Button)`

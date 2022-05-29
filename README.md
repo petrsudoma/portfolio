@@ -11,3 +11,4 @@ The repository contains frontend and backend part. Frontend is the main part of 
 - Next.js (Typescript)
 - Express (Typescript)
 - AWS DynamoDB
+- AWS EC2 hosting for backend

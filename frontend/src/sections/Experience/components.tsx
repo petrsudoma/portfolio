@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Flexbox = styled.div`
   margin-top: 200px;
-  overflow: auto;
   display: flex;
   justify-content: space-between;
 

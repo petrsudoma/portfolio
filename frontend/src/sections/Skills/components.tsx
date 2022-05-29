@@ -68,7 +68,7 @@ export const SkillsWrapper = styled.div<AnimationProps>`
   margin-top: 150px;
   width: 800px;
 
-  @keyframes skills-animaton {
+  @keyframes skills-animation {
     from {
       transform: translateX(0);
     }
@@ -78,7 +78,7 @@ export const SkillsWrapper = styled.div<AnimationProps>`
     }
   }
 
-  @keyframes skills-animaton-reverse {
+  @keyframes skills-animation-reverse {
     from {
       transform: translateX(-25%);
     }
@@ -91,17 +91,11 @@ export const SkillsWrapper = styled.div<AnimationProps>`
   ${(props) =>
     props.state === OtherSkillsState.SHOW
       ? `
-      animation-name: skills-animaton;
-      animation-duration: 2s;
-      animation-fill-mode: forwards;
-      animation-timing-function: ease-out;
+      animation: skills-animation 2s ease-out 0s forwards;
       `
       : props.state === OtherSkillsState.HIDE
       ? `
-      animation-name: skills-animaton-reverse;
-      animation-duration: 2s;
-      animation-fill-mode: forwards;
-      animation-timing-function: ease-out;
+      animation: skills-animation-reverse 2s ease-out 0s forwards;
       `
       : null};
 `;
